@@ -1,0 +1,47 @@
+1. Install Emacs:
+# PC environment: Mac Os; default emacs version 22
+# Install New Emacs:
+----
+~$  brew cask install emacs
+
+==> Tapping homebrew/cask
+Cloning into '/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask'...
+remote: Enumerating objects: 446420, done.
+remote: Total 446420 (delta 0), reused 0 (delta 0), pack-reused 446420
+Receiving objects: 100% (446420/446420), 201.58 MiB | 7.54 MiB/s, done.
+Resolving deltas: 100% (316291/316291), done.
+Checking out files: 100% (3675/3675), done.
+Tapped 1 command and 3583 casks (3,699 files, 216.3MB).
+==> Downloading https://emacsformacosx.com/emacs-builds/Emacs-26.3-universal.dmg
+==> Downloading from https://emacsformacosx.com/download/emacs-builds/Emacs-26.3-universal.dmg
+######################################################################## 100.0%
+==> Verifying SHA-256 checksum for Cask 'emacs'.
+==> Installing Cask emacs
+==> Moving App 'Emacs.app' to '/Applications/Emacs.app'.
+==> Linking Binary 'Emacs' to '/usr/local/bin/emacs'.
+==> Linking Binary 'ebrowse' to '/usr/local/bin/ebrowse'.
+==> Linking Binary 'emacsclient' to '/usr/local/bin/emacsclient'.
+==> Linking Binary 'etags' to '/usr/local/bin/etags'.
+🍺  emacs was successfully installed!
+-----
+Note: it replace the old emacs automaticlly. emacs or Emacs both work.
+emacs --version.
+allude to :'http://wikemacs.org/wiki/Installing_Emacs_on_OS_X'
+2. Install org-mode:
+
+I use the git depository.
+$ cd ~/path/you/store/package
+$ git clone https://code.orgmode.org/bzg/org-mode.git
+$ cd org-mode/
+$ make autoloads
+Allude to :https://orgmode.org/manual/Installation.html
+
+## the problem I met when make autoloads
+Loading /Users/zigongxu/git/emacs-package/org-mode/lisp/org-compat.el (source)...Cannot open load file: cl-lib
+
+That is because the emacs version is out of date and I only update as above then it work. The path that installation suggest to change 
+probabaly no need to change. Moreover, that command cause a error after start new Emacs.
+
+
+3. Org beginner
+https://orgmode.org/worg/org-tutorials/org4beginners.html
